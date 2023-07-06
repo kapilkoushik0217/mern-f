@@ -3,9 +3,9 @@ import NavBar from "../features/navbar/Navbar";
 
 function CartPage() {
     return <div>
-    <NavBar>
+    
     <Cart></Cart>
-    </NavBar>
+    
         
     </div>;
 }
