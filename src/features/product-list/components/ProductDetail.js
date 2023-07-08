@@ -4,8 +4,9 @@ import { RadioGroup } from '@headlessui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductByIdAsync, selectProductById } from '../productListSlice';
 import { useParams } from 'react-router-dom';
-import { addToCartAsync } from '../../cart/cartSlice';
+import { addToCartAsync, selectItems } from '../../cart/cartSlice';
 import { selectLoggedInUser } from '../../auth/authSlice';
+import { ITEMS_PER_PAGE, discountedPrice } from '../../../app/constants';
 
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
@@ -30,31 +31,35 @@ const highlights = [
   'Dyed with our proprietary colors',
   'Pre-washed & pre-shrunk',
   'Ultra-soft 100% cotton',
-]
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-
-
-// TODO : Loading UI  
+// TODO : Loading UI
 
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
-  const user = useSelector(selectLoggedInUser)
+  const user = useSelector(selectLoggedInUser);
+  const items= useSelector(selectItems)
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
 
-
-  const handleCart = (e)=>{
+  const handleCart = (e) => {
     e.preventDefault();
-    const newItem={...product,quantity:1,user:user.id };
-    delete newItem['id'];
-    dispatch(addToCartAsync(newItem)); 
-  }
+    if(items.findIndex(item => item.productId === product.id)<0){
+      const newItem = { ...product,productId:product.id, quantity: 1, user: user.id };
+      delete newItem['id'];
+      dispatch(addToCartAsync(newItem));
+    }
+    else{
+
+    }
+   
+  };
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -66,7 +71,6 @@ export default function ProductDetail() {
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
             <ol
-              role="list"
               className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
             >
               {product.breadcrumbs &&
@@ -149,8 +153,11 @@ export default function ProductDetail() {
             {/* Options */}
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
+              <p className="text-xl line-through tracking-tight text-gray-900">
+                ${product.price}
+              </p>
               <p className="text-3xl tracking-tight text-gray-900">
-               ${product.price}
+                ${discountedPrice(product)}
               </p>
 
               {/* Reviews */}
@@ -329,10 +336,10 @@ export default function ProductDetail() {
                 <div className="mt-4">
                   <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                     {highlights.map((highlight) => (
-                        <li key={highlight} className="text-gray-400">
-                          <span className="text-gray-600">{highlight}</span>
-                        </li>
-                      ))}
+                      <li key={highlight} className="text-gray-400">
+                        <span className="text-gray-600">{highlight}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
