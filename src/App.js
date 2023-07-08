@@ -4,7 +4,10 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import CartPage from "./pages/CartPage";
-
+import ErrorPage from "./pages/404";
+import OrderSuccessPage from "./pages/orderSuccessPage";
+import UserOrdersPage from "./pages/UserOrdersPage";
+import UserProfile from "./features/user/components/UserProfile";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -57,6 +60,7 @@ const router = createBrowserRouter([
     path: "/product-detail",
     element: <ProductDetail></ProductDetail>,
   },
+  
   {
     path: "/product-detail/:id",
     element: (
@@ -64,6 +68,22 @@ const router = createBrowserRouter([
         <ProductDetailPage></ProductDetailPage>
       </Protected>
     ),
+  },
+  {
+    path: "/order-success/:id",
+    element: <OrderSuccessPage></OrderSuccessPage>,
+  },
+  {
+    path: "/orders",
+    element: <UserOrdersPage></UserOrdersPage>,
+  },
+  {
+    path: "/profile",
+    element: <UserProfile></UserProfile>,
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
