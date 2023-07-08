@@ -8,6 +8,8 @@ import ErrorPage from "./pages/404";
 import OrderSuccessPage from "./pages/orderSuccessPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
 import UserProfile from "./features/user/components/UserProfile";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import UserProfilePage from "./pages/UserProfilePage";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,6 +24,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectLoggedInUser } from "./features/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
+import { fetchLoggedInUserAsync } from "./features/user/userSlice";
+import Logout from "./features/auth/components/Logout";
 
 const router = createBrowserRouter([
   {
@@ -79,7 +83,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <UserProfile></UserProfile>,
+    element: <UserProfilePage></UserProfilePage>,
+  },
+  {
+    path: "/logout",
+    element: <Logout></Logout>,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasswordPage></ForgotPasswordPage>,
   },
   {
     path: "*",
@@ -94,6 +106,7 @@ export default function App() {
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(user.id));
     }
   }, [dispatch, user]);
   return (

@@ -2382,72 +2382,49 @@
     {
       "items": [
         {
-          "title": "3D Embellishment Art Lamp",
-          "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
-          "price": 20,
-          "discountPercentage": 16.49,
-          "rating": 4.82,
-          "stock": 54,
-          "brand": "LED Lights",
-          "category": "home-decoration",
-          "thumbnail": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
           "images": [
-            "https://i.dummyjson.com/data/products/28/1.jpg",
-            "https://i.dummyjson.com/data/products/28/2.jpg",
-            "https://i.dummyjson.com/data/products/28/3.png",
-            "https://i.dummyjson.com/data/products/28/4.jpg",
-            "https://i.dummyjson.com/data/products/28/thumbnail.jpg"
-          ],
-          "quantity": 2,
-          "user": 2,
-          "id": 1
-        },
-        {
-          "title": "Sneakers Joggers Shoes",
-          "description": "Gender: Men , Colors: Same as DisplayedCondition: 100% Brand New",
-          "price": 40,
-          "discountPercentage": 12.57,
-          "rating": 4.38,
-          "stock": 6,
-          "brand": "Sneakers",
-          "category": "mens-shoes",
-          "thumbnail": "https://i.dummyjson.com/data/products/56/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/56/1.jpg",
-            "https://i.dummyjson.com/data/products/56/2.jpg",
-            "https://i.dummyjson.com/data/products/56/3.jpg",
-            "https://i.dummyjson.com/data/products/56/4.jpg",
-            "https://i.dummyjson.com/data/products/56/5.jpg",
-            "https://i.dummyjson.com/data/products/56/thumbnail.jpg"
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg",
+            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
           ],
           "quantity": 1,
-          "user": 2,
-          "id": 2
+          "user": 1,
+          "id": 1
         }
       ],
-      "totalAmount": 80,
-      "totalItems": 3,
+      "totalAmount": 1099,
+      "totalItems": 1,
       "user": {
-        "email": "184339bhashyam@gmail.com",
-        "password": "Kapil@1000",
+        "email": "kapilkoushik0217@gmail.com",
+        "password": "Kapil@2003",
         "addresses": [
           {
-            "name": "John Wick",
+            "name": "Kapil Koushik Bandi",
             "email": "kapilkoushik0217@gmail.com",
-            "phone": "08341716994",
+            "phone": "9603045565",
             "street": "Dr no3-4-11/2, Baig Street, Subbarao peta",
             "city": "Tadepalligudem",
             "state": "Andhra Pradesh",
             "pinCode": "534101"
           }
         ],
-        "id": 2
+        "id": 1
       },
       "paymentMethod": "card",
       "selectedAddress": {
-        "name": "John Wick",
+        "name": "Kapil Koushik Bandi",
         "email": "kapilkoushik0217@gmail.com",
-        "phone": "08341716994",
+        "phone": "9603045565",
         "street": "Dr no3-4-11/2, Baig Street, Subbarao peta",
         "city": "Tadepalligudem",
         "state": "Andhra Pradesh",
@@ -2455,89 +2432,6 @@
       },
       "status": "pending",
       "id": 1
-    },
-    {
-      "items": [
-        {
-          "title": "Silver Ring Set Women",
-          "description": "Jewelry Type:RingsCertificate Type:NonePlating:Silver PlatedShapeattern:noneStyle:CLASSICReligious",
-          "price": 70,
-          "discountPercentage": 13.57,
-          "rating": 4.61,
-          "stock": 51,
-          "brand": "Darojay",
-          "category": "womens-jewellery",
-          "thumbnail": "https://i.dummyjson.com/data/products/76/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/76/1.jpg",
-            "https://i.dummyjson.com/data/products/76/2.jpg",
-            "https://i.dummyjson.com/data/products/76/thumbnail.jpg"
-          ],
-          "quantity": 2,
-          "user": 2,
-          "id": 1
-        },
-        {
-          "title": "Metal Ceramic Flower",
-          "description": "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
-          "price": 35,
-          "discountPercentage": 10.94,
-          "rating": 4.93,
-          "stock": 146,
-          "brand": "Ifei Home",
-          "category": "lighting",
-          "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/97/1.jpg",
-            "https://i.dummyjson.com/data/products/97/2.jpg",
-            "https://i.dummyjson.com/data/products/97/3.jpg",
-            "https://i.dummyjson.com/data/products/97/4.webp",
-            "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
-          ],
-          "quantity": 2,
-          "user": 2,
-          "id": 2
-        }
-      ],
-      "totalAmount": 210,
-      "totalItems": 4,
-      "user": {
-        "email": "184339bhashyam@gmail.com",
-        "password": "Kapil@1000",
-        "addresses": [
-          {
-            "name": "John Wick",
-            "email": "kapilkoushik0217@gmail.com",
-            "phone": "08341716994",
-            "street": "Dr no3-4-11/2, Baig Street, Subbarao peta",
-            "city": "Tadepalligudem",
-            "state": "Andhra Pradesh",
-            "pinCode": "534101"
-          },
-          {
-            "name": "Demo User",
-            "email": "demo@gmail.com",
-            "phone": "9876543210",
-            "street": "Dr no3-4-11/2, Baig Street, Subbarao peta",
-            "city": "Tadepalligudem",
-            "state": "Andhra Pradesh",
-            "pinCode": "534101"
-          }
-        ],
-        "id": 2
-      },
-      "paymentMethod": "card",
-      "selectedAddress": {
-        "name": "Demo User",
-        "email": "demo@gmail.com",
-        "phone": "9876543210",
-        "street": "Dr no3-4-11/2, Baig Street, Subbarao peta",
-        "city": "Tadepalligudem",
-        "state": "Andhra Pradesh",
-        "pinCode": "534101"
-      },
-      "status": "pending",
-      "id": 2
     }
   ]
 }
