@@ -4,7 +4,7 @@ import { addToCart, deleteItemFromCart, fetchItemsByUserId, resetCart, updateCar
 const initialState = {
   status: 'idle',
   items: [],
-  cartLoaded: false,
+  cartLoaded: false
 };
 
 export const addToCartAsync = createAsyncThunk(
