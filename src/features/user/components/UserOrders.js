@@ -1,32 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchLoggedInUserOrderAsync, selectUserOrders,selectUserInfo } from '../userSlice';
+import { fetchLoggedInUserOrderAsync, selectUserOrders,selectUserInfo, selectUserInfoStatus } from '../userSlice';
 import { discountedPrice } from '../../../app/constants';
+import { Grid } from 'react-loader-spinner';
+
 
 
 export default function UserOrders() {
   const dispatch = useDispatch();
   const userInfo = useSelector(selectUserInfo);
+  const status = useSelector(selectUserInfoStatus);
   const orders = useSelector(selectUserOrders);
+  console.log(orders);
 
   useEffect(() => {
-    dispatch(fetchLoggedInUserOrderAsync(userInfo.id));
-  }, [dispatch,userInfo]);
+    dispatch(fetchLoggedInUserOrderAsync());
+  }, [dispatch,]);
 
   return (
     <div>
-      {orders.map((order) => (
+      {orders && orders.map((order) => (
          <div key={order.id}>
-
-<div>
-        <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-              Order # {order.id}
-            </h1>
-             <h3 className="text-xl my-5 font-bold tracking-tight text-red-900">
-              Order Status : {order.status}
-            </h3>
+          <div>
+           <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
+             <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+               <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
+                  Order # {order.id}
+                   </h1>
+                 <h3 className="text-xl my-5 font-bold tracking-tight text-red-900">
+                 Order Status : {order.status}
+                  </h3>
             <div className="flow-root">
               <ul role="list" className="-my-6 divide-y divide-gray-200">
                 {order.items.map((item) => (
@@ -120,6 +123,18 @@ export default function UserOrders() {
         </div>
 
       ))}
+      {status === 'loading' ? (
+        <Grid
+          height="80"
+          width="80"
+          color="rgb(79, 70, 229) "
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      ) : null}
     </div>
   );
 }
