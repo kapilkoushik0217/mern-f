@@ -29,10 +29,10 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
+            <div className=" flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
               <p className="order-2 md:order-1 mt-8 md:mt-0">
-                {' '}
-                © Kapil Koushik, 2023.{' '}
+                
+                © Kapil Koushik, 2023.
               </p>
               <div className="order-1 md:order-2">
                 <span className="px-2">About us</span>
